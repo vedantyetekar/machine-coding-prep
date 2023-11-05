@@ -7,11 +7,11 @@ const createReplyBox = () => {
   return div;
 };
 
-const createComment = (text, card) => {
+const createComment = (text, marginLeft) => {
   const commentCard = document.createElement("div");
   commentCard.setAttribute("class", "comment-card");
   commentCard.style.marginLeft =
-    4 + Number(card.substr(0, card.length - 2)) + "em";
+    4 + Number(marginLeft.substr(0, marginLeft.length - 2)) + "em";
   commentCard.innerHTML += ` <div class="comment-card">
         <div class="comment-text">
 ${text}
