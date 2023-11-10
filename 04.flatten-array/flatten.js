@@ -10,7 +10,7 @@ function flattenArray(arr) {
   return flatArray;
 }
 
-let arr = [1, 2, [3, 4], 5, 6];
+let arr = [1, 2, [3, 4], [5, [44, 455, [11, 22]]], 6];
 const res = flattenArray(arr);
 
 console.log(res);
