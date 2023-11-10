@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .container {
+        margin: 0 auto;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .container input {
+        width: 300px;
+        padding: 1em;
+        font-size: 1em;
+        border: 1px solid lightslategray;
+        outline: none;
+      }
+      .container div {
+        width: 100%;
+      }
+      .default::before {
+        content: "Default Behaviour";
+        color: crimson;
+        margin-right: 15px;
+      }
+      .debounce::before {
+        content: "Debounced Behaviour";
+        color: crimson;
+        margin-right: 15px;
+      }
+      .throttle::before {
+        content: "Throttled Behaviour";
+        margin-right: 15px;
+        color: crimson;
+      }
+    </style>
+    <title>Debouncing & Throttling</title>
+  </head>
+  <body>
+    <div class="container">
+      <input placeholder="type something..." />
+      <div class="default"></div>
+      <div class="debounce"></div>
+      <div class="throttle"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
