@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        border-radius: 6px;
+        padding: 20px;
+        background-color: #fff;
+        width: 280px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 14px;
+        font-size: 20px;
+      }
+      .container div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+      }
+      input[type="checkbox"] {
+        cursor: pointer;
+      }
+    </style>
+    <script src="script.js" defer></script>
+    <title>Challenge 07</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input id="select-all" type="checkbox" />
+        <label for="select-all">Select all</label>
+      </div>
+      <div>
+        <input type="checkbox" id="option-a" />
+        <label for="option-a">Option A</label>
+      </div>
+      <div>
+        <input type="checkbox" id="option-b" />
+        <label for="option-b">Option B</label>
+      </div>
+      <div>
+        <input type="checkbox" id="option-c" />
+        <label for="option-c">Option C</label>
+      </div>
+      <div>
+        <input type="checkbox" id="option-d" />
+        <label for="option-d">Option D</label>
+      </div>
+    </div>
+  </body>
+</html>
