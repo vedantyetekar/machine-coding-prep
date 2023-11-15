@@ -1,25 +1,45 @@
-const poll = document.querySelector(".container");
-const progress = document.querySelectorAll(".progress");
+const container = document.querySelector(".poll-container");
+const percentages = document.querySelectorAll(".option-top span:last-child");
+const fillBars = document.querySelectorAll(".option-bottom");
+const allOptions = document.querySelectorAll(".option");
+const inputs = document.querySelectorAll("input");
 
-poll.addEventListener("click", (e) => {
-  if (e.target.type === "radio") {
-    const selectedProgressBar =
-      e.target.closest(".option-details").children[1].children[0];
-    e.target.closest(".option-details").style.borderColor = "rgb(27, 76, 235)";
-    for (let i = 0; i < progress.length; ++i) {
-      progress[i].style.display = "flex";
-      const div =
-        progress[i].closest(".option-details").children[0].children[1];
-      progress[i].closest(
-        ".option-details"
-      ).children[0].children[0].children[0].style.cursor = "not-allowed";
-      div.textContent = progress[i].dataset.fill + "%";
-      if (progress[i].children[0] === selectedProgressBar) {
-        progress[i].children[0].style.backgroundColor = "rgb(27, 76, 235)";
-      } else {
-        progress[i].children[0].style.backgroundColor = "rgb(205, 205, 205)";
+container.addEventListener("click", (e) => {
+  if (e.target.tagName === "INPUT") {
+    resetPoll(e);
+    const path = e.composedPath();
+    path.forEach((item) => {
+      if (item?.classList?.contains("option")) {
+        item.classList.add("selected");
       }
-      progress[i].children[0].style.width = progress[i].dataset.fill + "%";
-    }
+    });
+    percentages.forEach((item) => {
+      item.style.display = "flex";
+    });
+    fillBars.forEach((item) => {
+      item.style.display = "block";
+      item.children[0].classList.add("fill");
+      item.children[0].style.width = item.children[0].dataset.fillPercent + "%";
+    });
   }
 });
+
+function resetPoll(e) {
+  allOptions.forEach((item) => {
+    if (item?.classList?.contains("selected")) {
+      item.classList.remove("selected");
+    }
+  });
+  inputs.forEach((item) => {
+    if (item.checked && item !== e.target) {
+      item.checked = false;
+    }
+  });
+  percentages.forEach((item) => {
+    item.style.display = "none";
+  });
+  fillBars.forEach((item) => {
+    item.style.display = "none";
+    item.children[0].classList.remove("fill");
+  });
+}
