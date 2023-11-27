@@ -1,0 +1,35 @@
+.ProgressBar {
+  width: 60%;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgb(92, 97, 92);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ProgressBar span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.Progress {
+  transform-origin: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: 30px;
+  background-color: rgb(64, 195, 47);
+  transition: 0.3s ease;
+}
+
+.complete {
+  font-size: 33px;
+}
