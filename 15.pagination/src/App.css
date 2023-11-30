@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.products {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgb(203, 198, 198);
+  width: 300px;
+  height: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product > img {
+  object-fit: cover;
+  height: 85%;
+  width: 100%;
+}
+
+.product > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 15px;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+
+.pagination > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: rgb(26, 215, 89);
+  cursor: pointer;
+}
