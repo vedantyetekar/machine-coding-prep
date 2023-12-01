@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#board {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  width: 540px;
+  height: 500px;
+  border: 10px solid navy;
+  background-color: rgb(31, 31, 255);
+  flex-wrap: wrap;
+  transition: 0.3s ease;
+}
+
+#winner {
+  height: 30px;
+  font-size: 30px;
+}
+
+.cell {
+  border: 5px solid navy;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+}
+
+.filled-yellow {
+  background-color: yellow;
+}
+
+.filled-red {
+  background-color: red;
+}
