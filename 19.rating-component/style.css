@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+}
+
+.star-container {
+  display: flex;
+  gap: 10px;
+}
+
+.star {
+  font-size: 60px;
+  color: grey;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.star.active {
+  color: gold;
+}
+
+.star:hover {
+  color: gold;
+}
+
+.rating-container {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(56, 63, 56);
+}
